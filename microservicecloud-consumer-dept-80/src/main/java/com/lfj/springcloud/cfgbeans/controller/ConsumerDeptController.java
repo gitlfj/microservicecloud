@@ -1,5 +1,6 @@
 package com.lfj.springcloud.cfgbeans.controller;
 
+import com.lfj.springcloud.constant.Constant;
 import com.lfj.springcloud.entities.Dept;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,7 +16,12 @@ public class ConsumerDeptController {
     /**
      *  请求路径
      */
-    private static final String REST_URL_PREFIX = "http://localhost:8001";
+//    private static final String REST_URL_PREFIX = "http://localhost:8001";
+
+    /**
+     * 负载均衡路径
+     */
+    private static final String REST_URL_PREFIX = "http://" + Constant.APP_NAME;
 
     @Autowired
     private RestTemplate restTemplate;
