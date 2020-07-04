@@ -1,4 +1,4 @@
-package com.lfj.springcloud.cfgbeans;
+package com.lfj.springcloud;
 
 import com.lfj.springcloud.constant.Constant;
 import com.lfj.springcloud.rule.MyRule;

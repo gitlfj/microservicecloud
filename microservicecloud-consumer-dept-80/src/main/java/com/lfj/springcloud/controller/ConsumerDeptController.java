@@ -1,4 +1,4 @@
-package com.lfj.springcloud.cfgbeans.controller;
+package com.lfj.springcloud.controller;
 
 import com.lfj.springcloud.constant.Constant;
 import com.lfj.springcloud.entities.Dept;

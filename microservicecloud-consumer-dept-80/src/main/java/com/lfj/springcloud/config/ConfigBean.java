@@ -1,4 +1,4 @@
-package com.lfj.springcloud.cfgbeans.config;
+package com.lfj.springcloud.config;
 
 import com.netflix.loadbalancer.IRule;
 import com.netflix.loadbalancer.RandomRule;
