@@ -5,7 +5,6 @@ import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
 
 @SuppressWarnings("serial")
-@NoArgsConstructor
 @Data
 @Accessors(chain=true)
 public class Dept {
@@ -25,11 +24,19 @@ public class Dept {
      */
     private String  db_source;
 
+    public Dept() {
+
+    }
+
     public Dept(String dname)
     {
         super();
         this.dname = dname;
     }
 
-
+    public Dept(Long deptno, String dname, String db_source) {
+        this.deptno = deptno;
+        this.dname = dname;
+        this.db_source = db_source;
+    }
 }

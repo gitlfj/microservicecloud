@@ -1,9 +1,7 @@
 package com.lfj.springcloud.service.impl;
 
-import com.lfj.springcloud.dao.DeptDao;
-import com.lfj.springcloud.service.DeptService;
 import com.lfj.springcloud.entities.Dept;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.lfj.springcloud.service.DeptService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
@@ -44,9 +42,9 @@ public class DeptServiceImpl implements DeptService {
     @PostConstruct
     private void init() {
         System.out.println("初始化方法。。。。");
-        initMap.put(1L, new Dept(1L, "研发部", "二号数据库"));
-        initMap.put(2L, new Dept(2L, "人事部", "二号数据库"));
-        initMap.put(3L, new Dept(3L, "财务部", "二号数据库"));
+        initMap.put(1L, new Dept(1L, "研发部", "一号数据库"));
+        initMap.put(2L, new Dept(2L, "人事部", "一号数据库"));
+        initMap.put(3L, new Dept(3L, "财务部", "一号数据库"));
 
     }
 

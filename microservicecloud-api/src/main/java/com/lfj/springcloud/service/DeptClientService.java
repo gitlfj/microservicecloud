@@ -1,5 +1,6 @@
 package com.lfj.springcloud.service;
 
+import com.lfj.springcloud.constant.Constant;
 import com.lfj.springcloud.entities.Dept;
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -8,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.util.List;
 
-@FeignClient(value = "MICROSERVICECLOUD-DEPT")
+@FeignClient(value = Constant.APP_NAME, fallbackFactory = DeptClientServiceFallbackFactory.class)
 public interface DeptClientService {
 
     @RequestMapping(value = "/dept/get/{id}",method = RequestMethod.GET)
